@@ -75,7 +75,8 @@ elseif isempty(net_file)
   end
 end
 
-load(net_file,'net');
+%load(net_file,'net');
+net=nndetector_live_load_net(net_file);
 network=nndetector_live_convert_net(net);
 
 if ~isempty(manual_threshold)
